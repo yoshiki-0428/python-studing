@@ -21,6 +21,7 @@ print()
 
 # 引数付きコンストラクタ
 class Sample2:
+    rate = 0.08
     # selfというキーワードを必ず使うことが条件
     # Javaはthisはあってもなくても良い
     def __init__(self, name, price):
@@ -33,8 +34,19 @@ class Sample2:
     def get_price(self):
         return self.price
 
+    @classmethod
+    def calcTax(cls, price):
+        return int(price + price * cls.rate)
+
+    @staticmethod
+    def plus(x, y):
+        return x + y
+
 sam = Sample2('John', 1000) # インスタンスの生成
 print(type(sam))
 print(sam.name, sam.price)
 sam.show_detail()
 print('クラスメソッドからの数値返却:', sam.get_price())
+
+print('クラスメソッドの実行', Sample2.calcTax(1000))
+print('スタティッククラスメソッドの実行', Sample2.plus(500, 500))
