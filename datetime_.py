@@ -24,6 +24,11 @@ print(weekday_dict[dt.weekday()])
 print()
 
 # 日時の文字列変換 %wは日曜スタートなので注意が必要
+weekday_dict_sun = {
+    0: '日曜', 1: '月曜', 2: '火曜', 3: '水曜',
+    4: '木曜', 5: '金曜', 6: '土曜',
+}
+print(weekday_dict_sun[int(dt.strftime('%w'))])
 dt_str = dt.strftime('%Y/%m/%d %w')
 print(dt_str)
 print(type(dt_str))
