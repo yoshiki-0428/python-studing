@@ -14,6 +14,8 @@
 - 正規表現
 
 ### tips
+[python doc](https://docs.python.jp/3/index.html)
+
 ``` 実行方法
 python3 xxx.py
 ※python3系をインストールする、他ライブラリは不要。ビルドインライブラリのみ使用。
